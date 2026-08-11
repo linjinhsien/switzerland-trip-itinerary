@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>經典瑞士三峰三火車｜林晉賢 行前資料</title>
+<title>經典瑞士三峰三火車｜12日行程總覽</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
@@ -18,6 +18,8 @@
     --red:#c33c2e;
     --gold:#c1953f;
     --peak-highlight:#fbe9d3;
+    --new-highlight:#e8f0e5;
+    --new-border:#5a8a5f;
   }
   *{box-sizing:border-box; margin:0; padding:0;}
   body{
@@ -29,7 +31,6 @@
   }
   .mono{ font-family:'JetBrains Mono', monospace; letter-spacing:0.02em; }
 
-  /* ---------- HERO ---------- */
   .hero{
     position:relative;
     background:linear-gradient(180deg,#152634 0%, var(--blue-deep) 55%, var(--blue-mid) 100%);
@@ -60,10 +61,9 @@
 
   .peaks-svg{ width:100%; display:block; margin-top:34px; opacity:0.95; }
 
-  /* ---------- INFO STRIP ---------- */
   .info-strip{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns:repeat(3,1fr);
     gap:1px;
     background:var(--line);
     border-bottom:1px solid var(--line);
@@ -77,9 +77,8 @@
   }
   .info-cell .value{ font-size:15px; font-weight:700; color:var(--blue-deep); }
   .info-cell .value.small{ font-size:13px; font-weight:500; color:var(--ink); }
-  @media(max-width:720px){ .info-strip{ grid-template-columns:repeat(2,1fr);} }
+  @media(max-width:720px){ .info-strip{ grid-template-columns:repeat(1,1fr);} }
 
-  /* ---------- SECTION WRAP ---------- */
   main{ max-width:880px; margin:0 auto; padding:0 20px; }
   section{ padding:48px 0 16px; }
   .section-head{
@@ -91,7 +90,6 @@
     font-family:'Noto Serif TC', serif; font-weight:700; font-size:22px; color:var(--ink);
   }
 
-  /* ---------- FLIGHTS ---------- */
   .flight-row{
     display:flex; justify-content:space-between; align-items:center;
     padding:12px 0; border-bottom:1px dashed var(--line); font-size:14px; flex-wrap:wrap; gap:6px;
@@ -101,7 +99,6 @@
   .flight-route{ color:var(--ink-soft); flex:1; min-width:200px; }
   .flight-dir{ font-size:11px; padding:3px 8px; border-radius:5px; background:var(--paper); color:var(--ink-soft); font-weight:700;}
 
-  /* ---------- TIMELINE ---------- */
   .timeline{ position:relative; padding-left:34px; }
   .timeline::before{
     content:''; position:absolute; left:11px; top:6px; bottom:6px; width:2px; background:var(--line);
@@ -115,11 +112,13 @@
     font-size:11px; font-weight:700; color:var(--blue-deep);
   }
   .day.highlight .day-dot{ background:var(--red); border-color:var(--red); color:#fff; }
+  .day.today .day-dot{ background:var(--gold); border-color:var(--gold); color:#fff; }
   .day-card{
     background:var(--paper-card); border:1px solid var(--line); border-radius:10px;
     padding:16px 18px;
   }
   .day.highlight .day-card{ border-color:var(--gold); background:var(--peak-highlight); }
+  .day.today .day-card{ border-color:var(--red); border-width:2px; }
   .day-top{ display:flex; justify-content:space-between; align-items:baseline; gap:10px; margin-bottom:6px; flex-wrap:wrap;}
   .day-date{ font-weight:700; color:var(--blue-deep); font-size:14.5px; }
   .day-hotel{ font-size:12px; color:var(--ink-soft); }
@@ -129,7 +128,6 @@
     color:var(--red); background:#fbe4e0; padding:3px 9px; border-radius:5px;
   }
 
-  /* ---------- CHECKLIST ---------- */
   details{
     background:var(--paper-card); border:1px solid var(--line); border-radius:10px;
     margin-bottom:10px; overflow:hidden;
@@ -158,30 +156,44 @@
   }
   .check-item.checked span{ color:var(--ink-soft); text-decoration:line-through; }
 
-  /* ---------- NOTES / CALLOUTS ---------- */
   .callout{
     border-left:3px solid var(--gold); background:#fbf6ec; padding:12px 16px; font-size:13.5px;
     color:var(--ink-soft); border-radius:0 8px 8px 0; margin:14px 0;
   }
+  .callout.new{
+    border-left:3px solid var(--new-border); background:var(--new-highlight); color:var(--ink);
+  }
+  .callout.new b{ color:var(--new-border); }
   ul.plain{ padding-left:18px; font-size:14px; }
   ul.plain li{ margin-bottom:6px; }
+  ul.plain li.new-item::marker{ color:var(--new-border); }
+
+  .faq-item{
+    background:var(--paper-card); border:1px solid var(--line); border-radius:10px;
+    padding:16px 18px; margin-bottom:10px;
+  }
+  .faq-q{ font-weight:700; color:var(--blue-deep); font-size:14.5px; margin-bottom:6px; }
+  .faq-a{ font-size:13.5px; color:var(--ink-soft); }
 
   footer{
     text-align:center; padding:40px 20px 60px; font-size:12px; color:var(--ink-soft);
+  }
+  .privacy-note{
+    text-align:center; font-size:12px; color:var(--ink-soft); padding:16px 20px;
+    background:#fbf6ec; border-top:1px solid var(--line); border-bottom:1px solid var(--line);
   }
 </style>
 </head>
 <body>
 
 <div class="hero">
-  <div class="hero-eyebrow">Trip Dossier · 26EC805CX</div>
-  <h1>經典瑞士三峰三火車<br>十二日行前資料</h1>
+  <div class="hero-eyebrow">Trip Dossier · Public Edition</div>
+  <h1>經典瑞士三峰三火車<br>十二日行程總覽</h1>
   <p class="sub">馬特洪峰．白朗峰．少女峰．黃金景觀列車．冰河國鐵．伯連納列車</p>
   <div class="hero-tags">
-    <span class="tag strong">林晉賢</span>
-    <span class="tag">8/5 桃園（北出）</span>
-    <span class="tag">純瑞團</span>
+    <span class="tag strong">純瑞團</span>
     <span class="tag">米蘭進．慕尼黑出</span>
+    <span class="tag">12天</span>
   </div>
 
   <svg class="peaks-svg" viewBox="0 0 800 90" preserveAspectRatio="none">
@@ -193,6 +205,8 @@
   </svg>
 </div>
 
+<div class="privacy-note">此為個資保護公開版本，領隊聯絡電話與參團人姓名已移除，僅保留行程與行前準備資訊。</div>
+
 <div class="info-strip">
   <div class="info-cell">
     <div class="label">集合時間</div>
@@ -203,12 +217,8 @@
     <div class="value small">桃園機場第一航廈<br>國泰航空團體櫃台</div>
   </div>
   <div class="info-cell">
-    <div class="label">領隊</div>
-    <div class="value small">林育騰 先生<br>0937-858-469</div>
-  </div>
-  <div class="info-cell">
-    <div class="label">緊急調度</div>
-    <div class="value small mono">0932-365-795</div>
+    <div class="label">行程編號</div>
+    <div class="value small mono">純瑞團．26EC805CX 系列</div>
   </div>
 </div>
 
@@ -236,7 +246,7 @@
       <span class="flight-code mono">CX466</span>
       <span class="flight-route">香港 08/16 09:00　→　桃園 11:00</span>
     </div>
-    <div class="callout">行李託運：每人 1 件 23 公斤，手提 7 公斤，不可跟同行者合併秤重。航空公司電話 02-7752-4883。</div>
+    <div class="callout">行李託運：每人 1 件 23 公斤，手提 7 公斤，不可跟同行者合併秤重。</div>
   </section>
 
   <section id="itinerary">
@@ -249,7 +259,7 @@
       </div></div>
 
       <div class="day"><div class="day-dot">2</div><div class="day-card">
-        <div class="day-top"><span class="day-date">8/6（四）</span><span class="day-hotel">COMO Hotel Cruise</span></div>
+        <div class="day-top"><span class="day-date">8/6（四）</span><span class="day-hotel">科莫 Hotel Cruise</span></div>
         <div class="day-desc">抵米蘭馬爾彭薩機場，米蘭市區觀光、逛街購物（贈義式冰淇淋一份）</div>
       </div></div>
 
@@ -272,21 +282,22 @@
       <div class="day"><div class="day-dot">6</div><div class="day-card">
         <div class="day-top"><span class="day-date">8/10（一）</span><span class="day-hotel">Saint Gervais Hotel & Spa</span></div>
         <div class="day-desc">策馬特看日出 → 霞慕尼（白朗峰．南針峰纜車．歐洲最高觀景台）</div>
+        <span class="day-flag">★ 南針峰纜車若天候關閉，改搭蒙特維冰河列車＋纜車，退票價差</span>
       </div></div>
 
-      <div class="day"><div class="day-dot">7</div><div class="day-card">
+      <div class="day today"><div class="day-dot">7</div><div class="day-card">
         <div class="day-top"><span class="day-date">8/11（二）</span><span class="day-hotel">Holiday Inn Bern-Westside</span></div>
-        <div class="day-desc">蒙特魯（搭乘黃金景觀列車 約2hr）→ 茨韋西門 → 伯恩</div>
+        <div class="day-desc">蒙特魯（搭乘黃金景觀列車 約2hr）→ 伯恩</div>
       </div></div>
 
       <div class="day"><div class="day-dot">8</div><div class="day-card">
         <div class="day-top"><span class="day-date">8/12（三）</span><span class="day-hotel">Sunstar Hotel Grindelwald</span></div>
-        <div class="day-desc">伯恩 → 格林德瓦（少女峰：艾格纜車快線／登山齒軌火車／山頂觀景台／冰宮）→ 因特拉肯</div>
+        <div class="day-desc">格林德瓦（少女峰：艾格纜車快線／登山齒軌火車／冰宮）</div>
       </div></div>
 
       <div class="day"><div class="day-dot">9</div><div class="day-card">
         <div class="day-top"><span class="day-date">8/13（四）</span><span class="day-hotel">Best Western Plus Fuessen</span></div>
-        <div class="day-desc">盧森（卡貝爾橋／獅子紀念碑）→ 蘇黎世 → 菲森</div>
+        <div class="day-desc">盧森 → 蘇黎世 → 菲森</div>
       </div></div>
 
       <div class="day"><div class="day-dot">10</div><div class="day-card">
@@ -305,23 +316,29 @@
       </div></div>
 
     </div>
-    <div class="callout">飯店若因客滿需調整同等級飯店或拆團分宿，並退價差，以領隊實際安排為準。</div>
+    <div class="callout new"><b>官方補充：</b>策馬特／薩斯菲若遇飯店客滿，可能拆團分宿或調整同等級飯店，並退價差。</div>
   </section>
 
   <section id="checklist">
     <div class="section-head"><span class="section-num">03</span><h2>行前打包清單</h2></div>
 
     <details open>
-      <summary>證件與財務</summary>
+      <summary>財務與現金</summary>
+      <div class="check-list">
+        <div class="check-item"><div class="box"></div><span>信用卡 2–3 張</span></div>
+        <div class="check-item"><div class="box"></div><span>現金：瑞郎為主（建議 300–500 CHF，視刷卡比例調整）</span></div>
+        <div class="check-item"><div class="box"></div><span>現金：少量歐元（米蘭、霞慕尼會用到）</span></div>
+        <div class="check-item"><div class="box"></div><span>小費預算：12 天團約 €144（領隊／導遊／司機），另房間清潔工每房 €1、行李員每件 €1（自行斟酌）</span></div>
+      </div>
+    </details>
+
+    <details>
+      <summary>證件</summary>
       <div class="check-list">
         <div class="check-item"><div class="box"></div><span>護照（效期需 6 個月以上，且本人簽名）</span></div>
         <div class="check-item"><div class="box"></div><span>護照影本／電子檔存手機</span></div>
         <div class="check-item"><div class="box"></div><span>大頭照 2 張（備用文件）</span></div>
         <div class="check-item"><div class="box"></div><span>身分證明文件影本</span></div>
-        <div class="check-item"><div class="box"></div><span>信用卡 2–3 張</span></div>
-        <div class="check-item"><div class="box"></div><span>現金：瑞郎為主（建議 300–500 CHF，視刷卡比例調整）</span></div>
-        <div class="check-item"><div class="box"></div><span>現金：少量歐元（米蘭、霞慕尼會用到；領隊小費以歐元支付）</span></div>
-        <div class="check-item"><div class="box"></div><span>小費預算參考：12 天團約 €144（領隊／導遊／司機）</span></div>
       </div>
     </details>
 
@@ -329,10 +346,10 @@
       <summary>行李與隨身物品</summary>
       <div class="check-list">
         <div class="check-item"><div class="box"></div><span>託運行李 1 件（23kg）＋ 手提 1 件（7kg）</span></div>
-        <div class="check-item"><div class="box"></div><span>8/9 策馬特過夜包（獨立小包，當晚換洗衣物＋盥洗用品）</span></div>
+        <div class="check-item"><div class="box"></div><span>8/9 策馬特過夜包（獨立小包，當晚換洗衣物＋盥洗用品，大行李箱由司機／團隊保管）</span></div>
         <div class="check-item"><div class="box"></div><span>慢性病藥物／每日保健食品（務必手提，不要託運）</span></div>
         <div class="check-item"><div class="box"></div><span>常備藥：感冒藥、止痛藥、暈車藥、高山症藥</span></div>
-        <div class="check-item"><div class="box"></div><span>轉接插頭（領隊會於機場發放，僅轉接無變壓功能）</span></div>
+        <div class="check-item"><div class="box"></div><span>轉接插頭（僅轉接無變壓功能，注意每天離開飯店要帶走）</span></div>
         <div class="check-item"><div class="box"></div><span>行動電源（歐洲遊覽車多無 Wi-Fi／充電孔）</span></div>
         <div class="check-item"><div class="box"></div><span>台灣網卡先買好（當地公共 WiFi 不普及）</span></div>
       </div>
@@ -366,17 +383,48 @@
   <section id="other">
     <div class="section-head"><span class="section-num">04</span><h2>其他提醒</h2></div>
     <ul class="plain">
-      <li><b>退稅門檻：</b>德國單店滿 €50／瑞士單店滿 CHF 300／義大利同店同日滿 €70，瑞士另有 Easy 退稅系統，領隊會協助辦理</li>
-      <li><b>治安：</b>歐洲扒手猖獗，建議斜背包／腰包／貼身包，貴重物品不要放後背包，遊覽車上不可留置物品過夜</li>
-      <li><b>飯店：</b>多不提供牙膏、牙刷、刮鬍刀、拖鞋；飯店全面禁菸（違規罰款約 €300–500）；瑞士渡假區飯店多無冷氣</li>
+      <li><b>退稅門檻：</b>德國單店滿 €50／瑞士單店滿 CHF 300／義大利同店同日滿 €70，瑞士另有 Easy 退稅系統</li>
+      <li><b>治安：</b>歐洲扒手猖獗，建議斜背包／腰包／貼身包，貴重物品不要放後背包</li>
+      <li class="new-item"><b>官方補充：</b>遊覽車近期竊案頻傳，下車務必攜帶貴重物品，不可留車上過夜</li>
+      <li><b>飯店：</b>多不提供牙膏、牙刷、刮鬍刀、拖鞋；飯店全面禁菸（違規罰款約 €300–500）</li>
+      <li class="new-item"><b>官方補充：</b>瑞士渡假區飯店多無冷氣（環保與當地文化考量）；德瑞部分飯店雙人房為「一大床框兩套床組」</li>
       <li><b>時差：</b>台灣時間減 6 小時（歐洲夏令時間）</li>
       <li><b>國際電話：</b>台灣打歐洲＝002＋國碼＋區域號碼(去0)＋電話；歐洲打台灣＝00＋886＋去0電話</li>
     </ul>
   </section>
 
+  <section id="faq">
+    <div class="section-head"><span class="section-num">05</span><h2>常見問題整理</h2></div>
+
+    <div class="faq-item">
+      <div class="faq-q">薩斯菲怎麼找土撥鼠？</div>
+      <div class="faq-a">搭 Spielbodenbahn 纜車到 Spielboden（2448m），沿「土撥鼠小徑 Murmeliweg」（約500公尺環狀步道）尋找。最佳時段是清晨與傍晚（土撥鼠日行性，天黑後不會出來），5–9月為活動季。可在遊客中心或山上餐廳購買官方飼料（CHF 5/袋），禁止餵食人類食物。</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">策馬特到霞慕尼要多久？</div>
+      <div class="faq-a">遊覽車走山路約2小時20分–2小時30分（約144公里）；火車需在Visp、Martigny、Vallorcine多次轉乘，約3.5–5小時。跟團走遊覽車較快。</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Haglöfs等戶外品牌哪裡買比較便宜？</div>
+      <div class="faq-a">瑞士物價全球最高，不建議在瑞士買。德國退稅門檻最低（單筆滿€50），市場competitive，建議留到慕尼黑（Day 10）再買，推薦 Sporthaus Schuster（Rosenstraße 1-5）或 Globetrotter München（Isartorplatz 8-10）。</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">策馬特紀念品（黑鼻羊娃娃）哪裡買？</div>
+      <div class="faq-a">策馬特代表動物是瓦萊黑鼻羊（Valais Blacknose Sheep），官方吉祥物叫「Wolli」。推薦 Matterland Souvenirs（Bahnhofstrasse 24）、Bayard Rosincha（Bahnhofplatz 2，火車站廣場旁）、策馬特旅遊局門市。Täsch轉運站沒有紀念品店，購物請留在策馬特。</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">法國超市買得到植物奶嗎？</div>
+      <div class="faq-a">杏仁奶（lait d'amande）、燕麥奶（lait d'avoine）在E.Leclerc、Carrefour、Auchan等連鎖超市都有，找「laits végétaux」貨架區。超市自有品牌 €1.39–2.79/L，專業品牌（Oatly、Bjorg）€3.00–3.50/L。</div>
+    </div>
+  </section>
+
 </main>
 
-<footer>經典瑞士三峰三火車 12 日｜26EC805CX｜林晉賢 專屬行前資料</footer>
+<footer>經典瑞士三峰三火車 12 日 · 公開安全版（已移除個資）</footer>
 
 <script>
   document.querySelectorAll('.check-item').forEach(item=>{
